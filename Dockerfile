@@ -7,7 +7,7 @@ LABEL maintainer="Ansible <info@ansible.com>"
 
 ENV PACKAGES="\
 bash \
-docker \
+docker.io \
 git \
 gcc \
 rsync \
