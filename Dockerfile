@@ -30,7 +30,9 @@ ${PIP_INSTALL_ARGS} -r /tmp/requirements.txt && \
 rm -rf /root/.cache && \
 molecule --version && \
 molecule drivers && \
-python3 -m pip check
-# running molecule commands adds a minimal level fail-safe about build success
+python3 -m pip check && \
+docker --version
+# running cli commands adds a minimal level fail-safe protection
+# against a broken image.
 
 ENV SHELL /bin/bash
